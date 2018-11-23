@@ -36,3 +36,27 @@ Java 中“ 字母” 和“ 数字” 的范围更大。字母包括’A’ ~ �
 		System.out.println(D);
 		D = 13; // 编译报错
 常量只能赋值一次
+
+11、类型之间转换
+往上转，自动
+往下转，需强制转换
+如：
+		byte b1 = 12;
+		long l1 = b1;
+		System.out.println("l1: " + l1);
+		
+		long l2 = 10;
+		byte b2 = (byte) l2;
+		System.out.println("b2: " + b2);
+
+		long l3 = 1242424252534533229l;
+		byte b3 = (byte) l3;
+		System.out.println("b3: " + b3); 值：109
+		
+		long l4 = 124242425l;
+		byte b4 = (byte) l4;
+		System.out.println("b4: " + b4); 值：-7
+
+
+
+

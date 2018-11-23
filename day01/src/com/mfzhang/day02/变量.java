@@ -46,6 +46,28 @@ public class 变量 {
 		final int D = 12;
 		System.out.println(D);
 //		D = 13; // 编译报错
+		
+		calculate();
+		calculate2();
+		
+		
+	}
+	
+	/**
+	 * strictfp 按照严格的浮点计算
+	 * 
+	 * @author mingfei.z
+	 */
+	private static strictfp void calculate() {
+		double a = 999999999.9999999999999999999999999999999999999; // 9位整数
+		double b = 280928490.28409284092840924809324;
+		System.out.println(a + b);
+	}
+
+	private static void calculate2() {
+		double a = 324242342429999999999.9999999999999999999999999999999999999; // 9位整数
+		double b = 280928490.28409284092840924809324;
+		System.out.println(a + b);
 	}
 	
 }
