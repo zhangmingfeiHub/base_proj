@@ -5,7 +5,7 @@
 package com.mfzhang.day01;
 
 /**
- * 
+ * 类名不区分大小写
  * @author mingfei.z
  */
 public class Helloworld {
