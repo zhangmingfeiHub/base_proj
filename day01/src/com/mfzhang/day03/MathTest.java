@@ -20,7 +20,10 @@ public class MathTest {
 		System.out.println("Math.toDegrees(Math.PI): " + Math.toDegrees(Math.PI)); // 弧度转角度
 		System.out.println("Math.Math.sqrt(4): " + Math.sqrt(4)); // 求平方根
 		System.out.println("Math.cbrt(27): " + Math.cbrt(27)); // 立方根
-		System.out.println("Math.IEEEremainder(27, 3): " + Math.IEEEremainder(27, 2)); // 立方根
+		
+		// n 等于最接近f1/f2 的 整数
+		System.out.println("Math.IEEEremainder(127, 31): " + Math.IEEEremainder(127, 31)); // f1 除以 f2的余数  =(f1-f2*n) =(127-31*4=3)
+		System.out.println("Math.IEEEremainder(127, 31): " + Math.IEEEremainder(127, 22)); // f1 除以 f2的余数  =(f1-f2*n) =(127-22*5=17)=(127-22*6=5)
 		
 		
 	}
