@@ -73,9 +73,20 @@ public class MathTest {
 		
 		// 无溢出计算，溢出则抛异常
 		System.out.println(5 & 6);
-		System.out.println("Math.addExact(2, 3): " + Math.addExact(2, 3));
+		System.out.println("Math.addExact(2, 3): " + Math.addExact(2, 3)); // 加
 		System.out.println("Math.addExact(22, 36): " + Math.addExact(22, 36));
 		System.out.println("Math.addExact(2L, 3l): " + Math.addExact(2L, 3l));
+		System.out.println("Math.subtractExact(2, 13): " + Math.subtractExact(2, 13)); // 减
+		System.out.println("Math.subtractExact(2L, 13l): " + Math.subtractExact(2L, 13l));
+		System.out.println("Math.multiplyExact(2, 16): " + Math.multiplyExact(2, 16)); // 乘
+		System.out.println("Math.multiplyExact(2L, 16L): " + Math.multiplyExact(2L, 16L));
+		System.out.println("Math.incrementExact(100): " + Math.incrementExact(100)); // 自增
+		System.out.println("Math.incrementExact(1323L): " + Math.incrementExact(1323L)); // 自增
+		System.out.println("Math.decrementExact(100): " + Math.decrementExact(100)); // 自减
+		System.out.println("Math.decrementExact(1323L): " + Math.decrementExact(1323L)); // 自减
+		System.out.println("Math.negateExact(100): " + Math.negateExact(100)); // 非
+		System.out.println("Math.negateExact(1323L): " + Math.negateExact(1323L)); // 
+		System.out.println("Math.negateExact(-1323L): " + Math.negateExact(-1323L)); // 
 	}
 	
 	private static int generateRandom(int m, int n) {
