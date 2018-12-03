@@ -87,6 +87,49 @@ public class MathTest {
 		System.out.println("Math.negateExact(100): " + Math.negateExact(100)); // 非
 		System.out.println("Math.negateExact(1323L): " + Math.negateExact(1323L)); // 
 		System.out.println("Math.negateExact(-1323L): " + Math.negateExact(-1323L)); // 
+		
+		try {
+			System.out.println("Math.toIntExact(120000000033l): " + Math.toIntExact(120000000033l)); // 
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		System.out.println("Math.toIntExact(12000033l): " + Math.toIntExact(12000033l)); // 
+		
+		// x除数，y被除数，返回小于或等于x/y的商的最大整数
+		System.out.println("Math.floorDiv(23, 3): " + Math.floorDiv(23, 3)); 
+		System.out.println("Math.floorDiv(1233333333333333l, 3): " + Math.floorDiv(1233333333333333l, 3));
+		System.out.println("Math.floorDiv(23, -4): " + Math.floorDiv(23, -4)); 
+		
+		// 求余
+		System.out.println("Math.floorMod(23, 3): " + Math.floorMod(23, 3)); 
+		System.out.println("Math.floorMod(1233333333333333l, 4): " + Math.floorMod(1233333333333333l, 4));
+		System.out.println("Math.floorMod(23, -4): " + Math.floorMod(23, -4)); 
+		
+		System.out.println("Math.abs(-1.2): " + Math.abs(-1.2)); // 绝对值
+		System.out.println("Math.max(1.2, 1.3): " + Math.max(1.2, 1.3));
+		System.out.println("Math.max(1.2, -1.3): " + Math.max(1.2, -1.3));
+		System.out.println("Math.max(-1.2, -1.3): " + Math.max(-1.2, -1.3));
+		System.out.println("Math.min(1.2, 1.3): " + Math.min(1.2, 1.3));
+		System.out.println("Math.min(1.2, -1.3): " + Math.min(1.2, -1.3));
+		System.out.println("Math.min(-1.2, -1.3): " + Math.min(-1.2, -1.3));
+		
+		// ulp 最小的精度单位
+		System.out.println("Math.ulp(3.0): " + Math.ulp(3.0));
+		
+		// = sqrt(x2 +y2)
+		System.out.println("Math.hypot(3.0, 4.0): " + Math.hypot(3.0, 4.0));
+		
+		// 返回第一个参数和第二个参数之间与第一个参数相邻的浮点数。如果两个参数比较起来相等，则返回第二个参数
+		System.out.println("Math.nextAfter(4.0, 5.0): " + Math.nextAfter(4.0, 5.0));
+		System.out.println("Math.nextAfter(5.0, 5.0): " + Math.nextAfter(5.0, 5.0));
+		System.out.println("Math.nextAfter(4.0, 3.0): " + Math.nextAfter(4.0, 3.0));
+		System.out.println("Math.nextAfter(413.0, 2.0): " + Math.nextAfter(413.0, 2.0));
+		System.out.println("Math.nextUp(2.2): " + Math.nextUp(2.2));
+		System.out.println("Math.nextDown(3.5): " + Math.nextDown(3.5));
+		
+		// scalb(x, y) = x * 2的y次幂
+		System.out.println("Math.scalb(2.0, 3): " + Math.scalb(2.0, 3));
+		
 	}
 	
 	private static int generateRandom(int m, int n) {
