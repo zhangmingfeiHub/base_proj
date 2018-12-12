@@ -1,0 +1,163 @@
+/**
+ * 
+ * @author mingfei.z 2018年12月12日 下午1:41:06
+ */
+package com.mfzhang.cal;
+
+/**
+ * 
+ * @author mingfei.z
+ */
+public class Calculate {
+
+	public static void main(String[] args) {
+		cal1();
+		
+		System.out.println("=============================");
+		
+		cal2();
+
+		System.out.println("=============================");
+		
+		cal3();
+
+		System.out.println("=============================");
+		
+		cal4();
+
+		System.out.println("=============================");
+		
+		cal5();
+	}
+	
+	/**
+	 * 位移运算符分：
+	 * 1、逻辑运算符，& | ^ ~；
+	 * 2、移位运算符，>> << >>>
+	 * 
+	 * @author mingfei.z
+	 */
+	private static void cal5() {
+		int a = 25; // 
+		System.out.println("a: " + Integer.toBinaryString(a));
+		int b = (a & 0b1000) / 0b1000;
+		System.out.println("b: " + b);
+	}
+	
+	/**
+	 * 按位与 &: 只要有一个为0，则为0；
+	 * 按位或 |: 只要有一个为1，则为1；
+	 * 按位异或 ^: 相同为0，不同为1；
+	 * 按位取反~: 非，即取反；
+	 * 
+	 * 在Java语言中，二进制数使用补码表示(32位)，最高位为符号位，正数的符号位为0，负数为1；
+	 * (1)正数的最高位为0，其余各位代表数值本身(二进制数)。 　
+	 *  	如：22，即10110
+	 * (2)对于负数，通过对该数绝对值的补码按位取反，再对整个数加1。
+	 *  	如：-33，绝对值33 对应二进制 100001，按位取反 11111111111111111111111111011110
+	 *  	再对整个数加1，即11111111111111111111111111011111
+	 * 
+	 * @author mingfei.z
+	 */
+	private static void cal4() {
+		Integer a = 21, b = 32;
+		System.out.println("a binary: " + Integer.toBinaryString(a));
+		System.out.println("b binary: " + Integer.toBinaryString(b));
+		
+		int aAndb = a & b;
+		System.out.println("a & b: " + aAndb);
+		int aOrb = a | b;
+		System.out.println("a | b: " + aOrb);
+		System.out.println("aOrb binary: " + Integer.toBinaryString(aOrb));
+		
+		int _1And1 = 0b1 & 0b1;
+		System.out.println("_1And1: " + _1And1);
+		int _1Or1 = 0b1 | 0b1;
+		System.out.println("_1Or1: " + _1Or1);
+		
+		int aXorb = a ^ b;
+		System.out.println("a ^ b: " + aXorb);
+		System.out.println("aXorb binary: " + Integer.toBinaryString(aXorb));
+		
+		int nota = ~a;
+		int notb = ~b;
+		System.out.println("~a: " + nota);
+		System.out.println("~a binary: " + Integer.toBinaryString(nota));
+		System.out.println("~b: " + notb);
+		System.out.println("~b binary: " + Integer.toBinaryString(notb));
+	}
+	
+	private static void cal3() {
+		int a = 7;
+		a = (a & 0b1000) / 0b1000;
+		System.out.println("a: " + a);
+		
+		int b = 5;
+		b = (b & 0b100) / 0b100;
+		System.out.println("b: " + b);
+		
+		int c = 0b1000;
+		System.out.println("c: " + c);
+
+		int d = 0b111;
+		System.out.println("d: " + d);
+	}
+	
+	private static void cal2() {
+		int a = 3;
+		System.out.println("a: " + a);
+		a++;
+		System.out.println("a: " + a);
+		++a;
+		System.out.println("a: " + a);
+		a--;
+		System.out.println("a: " + a);
+		--a;
+		System.out.println("a: " + a);
+		
+		int b = 5;
+		System.out.println("b: " + b);
+		int b2 = b++ + 2;
+		System.out.println("b2: " + b2);
+		System.out.println("b: " + b);
+		int b3 = ++b + 2;
+		System.out.println("b3: " + b3);
+		System.out.println("b: " + b);
+
+		int d = 5, c = 5;
+		System.out.println("d: " + d + ", c: " + c);
+		int m = d++ + 2;
+		System.out.println("m: " + m);
+		int n = ++c + 2;
+		System.out.println("n: " + n);
+	}
+	
+	/**
+	 * 结合运算
+	 * 
+	 * @author mingfei.z
+	 */
+	private static void cal1() {
+		int x = 3;
+		System.out.println("x: " + x);
+		x += 4;
+		System.out.println("x: " + x);
+		x -= 2;
+		System.out.println("x: " + x);
+		x *= 3;
+		System.out.println("x: " + x);
+		x /= 2;
+		System.out.println("x: " + x);
+		x %= 3;
+		System.out.println("x: " + x);
+		
+		x += 2.5; // (int)(x + 2.5)
+		System.out.println("x: " + x);
+		
+		double y = 2.05;
+		System.out.println("y: " + y);
+		y += 3;
+		System.out.println("y: " + y);
+	}
+
+}
