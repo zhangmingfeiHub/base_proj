@@ -28,12 +28,52 @@ public class Calculate {
 		System.out.println("=============================");
 		
 		cal5();
+
+		System.out.println("=============================");
+		
+		cal6();
+
+		System.out.println("=============================");
+		
+		cal7();
+	}
+	
+	/**
+	 * 异或
+	 * 
+	 * @author mingfei.z
+	 */
+	private static void cal7() {
+		System.out.println("235 binary: " + Integer.toBinaryString(235));
+		System.out.println("1 ^ 235: " + (1 ^ 235));
+		System.out.println("1 ^ 235 binary: " + Integer.toBinaryString(1 ^ 235));
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("1 ^ 236: " + (1 ^ 236));
+		System.out.println("1 ^ 236 binary: " + Integer.toBinaryString(1 ^ 236));
+	}
+	
+	private static void cal6() {
+		int a = 3, b = 5;
+		System.out.println("a = " + a + ", b = " + b);
+		System.out.println("a binary: " + Integer.toBinaryString(a));
+		System.out.println("b binary: " + Integer.toBinaryString(b));
+		int c = a ^ b;
+		System.out.println("c = a ^ b binary: " + Integer.toBinaryString(c));
+		a = c ^ a;
+		b = c ^ b;
+		System.out.println("变量值反转：a = " + a + ", b = " + b);
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+		System.out.println("变量值反转：a = " + a + ", b = " + b);
 	}
 	
 	/**
 	 * 位移运算符分：
 	 * 1、逻辑运算符，& | ^ ~；
-	 * 2、移位运算符，>> << >>>
+	 * 2、移位运算符，>> << >>>；
+	 * 
+	 * 左移<<，有符号右移>>，无符号右移>>>
 	 * 
 	 * @author mingfei.z
 	 */
@@ -42,6 +82,80 @@ public class Calculate {
 		System.out.println("a: " + Integer.toBinaryString(a));
 		int b = (a & 0b1000) / 0b1000;
 		System.out.println("b: " + b);
+		
+		int c = 21 << 3;
+		System.out.println("c = 21 << 3: " + c);
+		System.out.println("21 binary: " + Integer.toBinaryString(21));
+		System.out.println("c binary: " + Integer.toBinaryString(c));
+		
+		System.out.println("2 binary: " + Integer.toBinaryString(2));
+		System.out.println("2 << 5: " + (2 << 5));
+		System.out.println("2 << 5 binary: " + Integer.toBinaryString(2 << 5));
+
+		System.out.println("2 binary: " + Integer.toBinaryString(2));
+		System.out.println("2 << 35: " + (2 << 35));
+		System.out.println("2 << 35 binary: " + Integer.toBinaryString(2 << 35));
+
+		System.out.println("2 binary: " + Integer.toBinaryString(2));
+		System.out.println("2 << 32: " + (2 << 32));
+		System.out.println("2 << 32 binary: " + Integer.toBinaryString(2 << 32));
+
+		System.out.println("2 binary: " + Integer.toBinaryString(2));
+		System.out.println("2 << 30: " + (2 << 30));
+		System.out.println("2 << 30 binary: " + Integer.toBinaryString(2 << 30));
+
+		System.out.println("2 binary: " + Integer.toBinaryString(2));
+		System.out.println("2 << 29: " + (2 << 29));
+		System.out.println("2 << 29 binary: " + Integer.toBinaryString(2 << 29));
+		
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("268 binary: " + Integer.toBinaryString(268));
+		System.out.println("268 >> 2: " + (268 >> 2));
+		System.out.println("268 >> 2 binary: " + Integer.toBinaryString(268 >> 2));
+
+		System.out.println("64 binary: " + Integer.toBinaryString(64));
+		System.out.println("64 >> 2: " + (64 >> 2));
+		System.out.println("64 >> 2 binary: " + Integer.toBinaryString(64 >> 2));
+		
+
+		System.out.println("64 binary: " + Integer.toBinaryString(64));
+		System.out.println("64 >>> 2: " + (64 >>> 2));
+		System.out.println("64 >>> 2 binary: " + Integer.toBinaryString(64 >>> 2));
+
+		System.out.println("-64 binary: " + Integer.toBinaryString(-64));
+		System.out.println("-64 >>> 2: " + (-64 >>> 2));
+		System.out.println("-64 >>> 2 binary: " + Integer.toBinaryString(-64 >>> 2));
+
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("236 >> 1: " + (236 >> 1));
+		System.out.println("236 >> 1 binary: " + Integer.toBinaryString(236 >> 1));
+
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("236 >> 2: " + (236 >> 2));
+		System.out.println("236 >> 2 binary: " + Integer.toBinaryString(236 >> 2));
+
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("236 >> 3: " + (236 >> 3));
+		System.out.println("236 >> 3 binary: " + Integer.toBinaryString(236 >> 3));
+
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("236 << 1: " + (236 << 1));
+		System.out.println("236 << 1 binary: " + Integer.toBinaryString(236 << 1));
+
+		System.out.println("****************-----------------**********");
+		
+		System.out.println("236 binary: " + Integer.toBinaryString(236));
+		System.out.println("236 << 2: " + (236 << 2));
+		System.out.println("236 << 2 binary: " + Integer.toBinaryString(236 << 2));
 	}
 	
 	/**
